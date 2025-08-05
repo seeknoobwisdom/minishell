@@ -1,36 +1,41 @@
-# Minishell
+# 🐚 Minishell
 
-A simple shell implementation project from 42 School that recreates basic functionality of bash.
+`minishell` is a simplified UNIX shell, implemented in C, as part of the **42 Abu Dhabi Core Curriculum**.  
+It replicates basic shell behavior including **built-in commands**, **redirections**, **pipes**, **environment variables**, and **signal handling**.
 
-## Description
+![Language](https://img.shields.io/badge/C-100%25-blue)
+![Project](https://img.shields.io/badge/42%20Project-Minishell-green)
+![Status](https://img.shields.io/badge/Status-Finished-success)
 
-Minishell is a project that challenges students to create their own Unix shell, implementing core shell features and understanding how command-line interfaces work under the hood. This project provides deep insights into process management, file descriptors, and system calls.
+---
 
-## Features
+## 🧩 About
 
-- **Command execution** with absolute and relative paths
-- **Built-in commands**: `echo`, `cd`, `pwd`, `export`, `unset`, `env`, `exit`
-- **Pipes** (`|`) for command chaining
-- **Redirections**: 
-  - Input (`<`) and output (`>`) redirection
-  - Append mode (`>>`)
-  - Here-doc (`<<`)
-- **Environment variables** expansion (`$VAR`)
-- **Exit status** handling (`$?`)
-- **Signal handling** (Ctrl+C, Ctrl+D, Ctrl+\)
-- **Quote handling** (single and double quotes)
-- **Command history** navigation
+The goal of this project is to create a functioning shell with a subset of Bash’s capabilities.  
+It handles command execution, redirections, pipes, and built-ins, while respecting POSIX standards and custom error/signal handling.
 
-## Technical Implementation
+> ✅ No use of system()  
+> ✅ No external parser (must write your own)  
+> ✅ Must support proper memory and file descriptor management
 
-- Written in **C**
-- Memory management with no leaks
-- Proper error handling and edge cases
-- Readline library integration for line editing
-- Process creation and management using `fork()`, `execve()`, `wait()`
+---
 
-## Usage
+## 🚀 Features
+
+- ✅ Execution of binary files and built-in shell commands
+- ✅ I/O Redirections: `>`, `>>`, `<`, `<<` (here_doc)
+- ✅ Pipelines: `cmd1 | cmd2 | cmd3`
+- ✅ Environment variables: `$PATH`, `$USER`, etc.
+- ✅ `export`, `unset`, `env` command support
+- ✅ Proper signal handling: `Ctrl+C`, `Ctrl+\`, etc.
+- ✅ Exit codes for last executed command
+- ✅ Quotes and escape sequences (`'`, `"`, `\`)
+
+---
+
+## 🛠 Installation
 
 ```bash
+git clone https://github.com/seeknoobwidom/minishell.git
+cd minishell
 make
-./minishell
