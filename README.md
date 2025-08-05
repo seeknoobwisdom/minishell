@@ -35,6 +35,10 @@ It handles command execution, redirections, pipes, and built-ins, while respecti
 
 ## 🛠 Installation
 
+## Consider
+>checking all edge cases open fds at the end of the child
+>multi envir or multi $ in the terminal or in the heredoc "<"
+
 ```bash
 git clone https://github.com/seeknoobwidom/minishell.git
 cd minishell
